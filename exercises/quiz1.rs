@@ -10,10 +10,19 @@
 // Write a function that calculates the price of an order of apples given
 // the quantity bought. No hints this time!
 
-// I AM NOT DONE
-
 // Put your function here!
 // fn calculate_price_of_apples {
+pub fn calculate_price_of_apples(num: i32) -> i32 {
+    let mut cost = 0;
+    // Price of an apple calculated based on number (num) of apples
+    // Condition 1 (<= 40):  Apple costs 2 rustbuck
+    // Condition 2 (> 40): Apple costs 1 rustbuck if more than 40 apples
+    if (num <= 40) { cost = 2; } else { cost = 1; }
+
+    // Return order price (cost of apple * number of apples)
+    cost * num
+}
+
 
 // Don't modify this function!
 #[test]
